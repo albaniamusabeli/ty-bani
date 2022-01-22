@@ -9,13 +9,14 @@
     <ion-card>
         <ion-card-content>
             <ion-title class="ion-text-center">Inicio de Sesión</ion-title>
-            <form>
+
+            <form [formGroup]="formularioLogin" (ngSubmit)="botonIngresar()">
                 <ion-grid>
                     <ion-row>
                         <ion-col>
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Correo</mat-label>
-                                <input matInput placeholder="Correo">
+                                <input formControlName = "correo" matInput placeholder="Correo">
                             </mat-form-field>
                         </ion-col>
                     </ion-row>
@@ -24,20 +25,18 @@
                         <ion-col>
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Contraseña</mat-label>
-                                <input matInput placeholder="Contraseña">
+                                <input formControlName = "contrasena" matInput placeholder="Contraseña">
                             </mat-form-field>
                         </ion-col>
                     </ion-row>
 
                     <ion-row>
                         <ion-col class="ion-text-center">
-                            <button class="full-width" mat-raised-button color="accent">Ingresar</button>
+                            <button type="submit" class="full-width" mat-raised-button color="accent">Ingresar</button>
                         </ion-col>
                     </ion-row>
     
                 </ion-grid>
-
-               
 
             </form>
 
