@@ -13,8 +13,10 @@ export class LoginService {
   constructor(private firestore: AngularFirestore,
               private auth: AngularFireAuth) { }
 
+
+
   // crear usuario para iniciar sesion en firebase
-  crearUsuario(data: any): Promise<any>{
+  registrarUsuario(data: any): Promise<any>{
     return this.auth.createUserWithEmailAndPassword(data.correo, data.contrasena);
   }
 
@@ -27,6 +29,10 @@ export class LoginService {
   guardarUsuario(data: any){
     return this.firestore.collection('usuarios').doc(data.uid).set(data);
   }
+
+
+
+
 
   // Obtener usuario
   obtenerUsuario(data: any){

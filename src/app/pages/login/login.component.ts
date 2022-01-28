@@ -29,11 +29,6 @@ export class LoginComponent implements OnInit {
 
   //boton ingresar del login con GOOGLE
   botonIngresar(){
-    this.servicioLogin.loginGoogle().then(data =>{
-      //console.log(data.additionalUserInfo.profile.name);
-      //console.log(data.additionalUserInfo.profile.picture);
-      
-    })
     
   }
 
@@ -46,5 +41,15 @@ export class LoginComponent implements OnInit {
     })
   }
 
+
+  //login con GOOGLE
+  botonGoogle(){
+    this.servicioLogin.loginGoogle().then(data =>{
+      //console.log(data.additionalUserInfo.profile.name);
+      //console.log(data.additionalUserInfo.profile.picture);
+      
+    })
+    
+  }
 
 }

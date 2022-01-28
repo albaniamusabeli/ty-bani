@@ -1,14 +1,11 @@
-<ion-header>
-    <ion-toolbar>
-        <ion-title>Ty-Bani: {{usuario}}</ion-title>
-    </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+
 
 <ion-content>
 
     <ion-card>
         <ion-card-content>
-            <ion-title class="ion-text-center">Inicio de Sesión:</ion-title>
+            <ion-title class="ion-text-center">Inicio de Sesión</ion-title>
 
             <form [formGroup]="formularioLogin" (ngSubmit)="botonIngresar()">
                 <ion-grid>
@@ -16,16 +13,16 @@
                         <ion-col>
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Correo</mat-label>
-                                <input formControlName = "correo" matInput placeholder="Correo">
+                                <input type="text" formControlName="correo" matInput placeholder="Correo">
                             </mat-form-field>
                         </ion-col>
                     </ion-row>
-    
+
                     <ion-row>
                         <ion-col>
                             <mat-form-field class="full-width" appearance="outline">
                                 <mat-label>Contraseña</mat-label>
-                                <input formControlName = "contrasena" matInput placeholder="Contraseña">
+                                <input formControlName="contrasena" matInput placeholder="Contraseña">
                             </mat-form-field>
                         </ion-col>
                     </ion-row>
@@ -33,13 +30,21 @@
                     <ion-row>
                         <ion-col class="ion-text-center">
                             <button type="submit" class="full-width" mat-raised-button color="accent">Ingresar</button>
-                            <button type="button" mat-raised-button color="primary" (click)="obtenerUsuario()">USUARIO</button>
+                            <div class="ion-margin-top">
+                                <button (click)="botonGoogle()" type="button" class="full-width" id="boton-google" mat-raised-button
+                                    color="warn">Ingresar con Google</button>
+                            </div>
+                         <!--    <button type="button" mat-raised-button color="primary"
+                                (click)="obtenerUsuario()">USUARIO</button> -->
                         </ion-col>
 
                     </ion-row>
 
+                    <div class="ion-text-center ion-margin-top">
+                        ¿No tienes una cuenta? <a routerLink="/sign-up">Regístrate</a>
+                    </div>
 
-    
+
                 </ion-grid>
 
             </form>
