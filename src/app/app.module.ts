@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +27,9 @@ import { HeaderComponent } from './shared/components/header/header.component';
     LoginComponent,
     SignUpComponent,
     HeaderComponent
+  ],
+  schemas:[
+    CUSTOM_ELEMENTS_SCHEMA
   ],
   imports: [
     BrowserModule,
