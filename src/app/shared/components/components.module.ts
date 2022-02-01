@@ -6,11 +6,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { AgregarTyComponent } from './agregar-ty/agregar-ty.component';
 import { ListarTyComponent } from './listar-ty/listar-ty.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 
 @NgModule({
-  declarations: [HeaderComponent, AgregarTyComponent, ListarTyComponent],
+  declarations: [HeaderComponent, AgregarTyComponent, ListarTyComponent, PerfilComponent],
   imports: [
     CommonModule,
     IonicModule,
