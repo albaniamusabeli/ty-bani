@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { ModalController } from '@ionic/angular';
 import { Peluche } from 'src/app/interfaces/ty';
 import { FirestoreOsitosService } from 'src/app/services/firestore-ositos.service';
 import { StorageService } from 'src/app/services/storage.service';
@@ -20,7 +21,8 @@ export class ModalComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
               private firestoreService: FirestoreOsitosService,
-              private storageService: StorageService) { }
+              private storageService: StorageService,
+              private modalCtrl: ModalController) { }
 
   ngOnInit(): void {
   }
@@ -42,9 +44,12 @@ export class ModalComponent implements OnInit {
       fechaCreacion: new Date
     }
 
+    //Se agrega el osito
     this.firestoreService.agregarServiceTy(this.ositoTy).then(()=>{
       console.log("Osito Guardado");
       
+      //Cerrar el modal que tiene el formulario para agregar osito
+      this.modalCtrl.dismiss();
     })
 
   }

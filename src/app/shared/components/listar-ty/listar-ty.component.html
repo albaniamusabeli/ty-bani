@@ -1,1 +1,12 @@
-<p>Página para mostrar lista de ositos</p>
+
+<ion-content class="ion-padding">
+    <ion-card *ngFor="let i of listaTy">
+        <img [src]="i.fotoUrl" />
+        <ion-card-header>
+          <ion-card-title>{{i.nombre}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-button color="success">Detalles</ion-button>
+        </ion-card-content>
+      </ion-card>
+</ion-content>

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { query } from 'firebase/firestore';
+import { Observable } from 'rxjs';
 import { Peluche } from '../interfaces/ty';
 
 @Injectable({
@@ -13,5 +15,8 @@ export class FirestoreOsitosService {
     return this.firestore.collection('tydb').add(peluche)
   }
 
-
+  //Obtener la lista de ositos ordenados por fecha de Creacion
+  obtenerListaTyFire(): Observable<any>{
+    return this.firestore.collection('tydb', query => query.orderBy('fechaCreacion', 'asc')).snapshotChanges()
+  }
 }
