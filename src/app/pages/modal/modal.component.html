@@ -1,0 +1,43 @@
+<!-- Este modal contiene el formulario para agregar ositos,
+la foto ya estaría en firebase -->
+
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Agregar osito</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+    <ion-card>
+        <ion-card-content>
+                <ion-title class="ion-text-center">Información Ty</ion-title>
+
+                <form [formGroup]="formAgregarTy" (ngSubmit)="agregarTy()" >
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col>
+                                <mat-form-field class="full-width espacio-form" appearance="outline">
+                                    <mat-label>Nombre Ty</mat-label>
+                                    <input formControlName="nombreTy" matInput type="text" placeholder="ty">
+                                </mat-form-field>
+                            </ion-col>
+
+                            <ion-col>
+                                <mat-form-field class="full-width espacio-form" appearance="outline">
+                                    <mat-label>Color</mat-label>
+                                    <input formControlName="color" matInput type="text" placeholder="color">
+                                </mat-form-field>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+
+                    <ion-row>
+                        <ion-col class="ion-text-center">
+                            <button id="btn-agregar" type="submit" class="full-width" mat-raised-button>Agregar</button>
+                        </ion-col>
+                    </ion-row>
+
+                </form>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

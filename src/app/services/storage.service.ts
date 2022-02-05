@@ -8,6 +8,7 @@ import 'firebase/compat/storage'
 })
 export class StorageService {
 
+  fotoUrl: string | null = '';
 
   constructor(private storage : AngularFireStorage) { }
   storageRef = firebase.app().storage().ref()

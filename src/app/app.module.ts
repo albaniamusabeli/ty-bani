@@ -18,10 +18,12 @@ import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { ModalComponent } from './pages/modal/modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ModalComponent
     
   ],
   schemas:[
