@@ -10,6 +10,14 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
+  userUID : string = ''
+
+  googleProfile = {
+    nombre: '',
+    imagen: ''
+  }
+
+
   constructor(private firestore: AngularFirestore,
               private auth: AngularFireAuth) { }
 

@@ -19,4 +19,5 @@ export class FirestoreOsitosService {
   obtenerListaTyFire(): Observable<any>{
     return this.firestore.collection('tydb', query => query.orderBy('fechaCreacion', 'desc')).snapshotChanges()
   }
+
 }
