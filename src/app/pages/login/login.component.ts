@@ -33,13 +33,13 @@ export class LoginComponent implements OnInit {
   }
 
   //obtener usuario logueado con GOOGLE
-  obtenerUsuario(){
+  /* obtenerUsuario(){
     this.servicioLogin.obtenerUsuarioGoogle().subscribe(data=>{
       this.usuario = data.email
       console.log(data.displayName);
       
     })
-  }
+  } */
 
 
   //login con GOOGLE

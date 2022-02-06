@@ -17,6 +17,6 @@ export class FirestoreOsitosService {
 
   //Obtener la lista de ositos ordenados por fecha de Creacion
   obtenerListaTyFire(): Observable<any>{
-    return this.firestore.collection('tydb', query => query.orderBy('fechaCreacion', 'asc')).snapshotChanges()
+    return this.firestore.collection('tydb', query => query.orderBy('fechaCreacion', 'desc')).snapshotChanges()
   }
 }
